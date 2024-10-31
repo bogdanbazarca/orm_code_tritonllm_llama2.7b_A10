@@ -80,7 +80,7 @@ echo "Installing unzip"
 apt install unzip
 
 echo "Pulling docker image"
-su - ubuntu -c "source /home/opc/.bashrc && docker pull fra.ocir.io/ocisateam/tritonllm_llama2.7:latest"
+su - ubuntu -c "source /home/ubuntu/.bashrc && docker pull fra.ocir.io/ocisateam/tritonllm_llama2.7:latest"
 
 echo "Starting the docker container"
 su - ubuntu -c "nohup docker run --rm \
