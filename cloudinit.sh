@@ -65,7 +65,7 @@ dnf install -y git
 
 
 echo "Pulling docker image"
-su - opc -c "source /home/opc/.bashrc && docker pull mtz.ocir.io/orasenatdpltintegration03/triton_trt_llm_rclone_commands:latest"
+su - opc -c "source /home/opc/.bashrc && docker pull fra.ocir.io/ocisateam/tritonllm_llama2.7:latest"
 
 echo "Starting the docker container"
 su - opc -c "nohup docker run --rm \
@@ -78,7 +78,7 @@ su - opc -c "nohup docker run --rm \
   --device /dev/fuse \
   --security-opt apparmor=unconfined \
   -p 8000:8000 -p 8001:8001 -p 8002:8002 \
-  mtz.ocir.io/orasenatdpltintegration03/triton_trt_llm_rclone_commands:latest > ~ubuntu/docker_container.log 2>&1 &"
+  fra.ocir.io/ocisateam/tritonllm_llama2.7:latest > ~ubuntu/docker_container.log 2>&1 &"
 
 
 date
