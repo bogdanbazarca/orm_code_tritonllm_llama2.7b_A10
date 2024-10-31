@@ -1,8 +1,8 @@
 ## Copyright © 2021, Oracle and/or its affiliates.
 ## All rights reserved. The Universal Permissive License (UPL), Version 1.0 as shown at http://oss.oracle.com/licenses/upl
 
-title: "Deploy A10 shape with one GPU and an OCI Obj Storage bucket to test NVIDIA tritonllm inference for llama2-7b-hf"
-stackDescription: "Deploy A10 shape with one GPU and an OCI Obj Storage bucket to test NVIDIA tritonllm inference for llama2-7b-hf"
+title: "Deploy A10 shape with one GPU to test NVIDIA tritonllm inference for llama2-7b-hf"
+stackDescription: "Deploy A10 shape with one GPU to test NVIDIA tritonllm inference for llama2-7b-hf"
 schemaVersion: 1.1.0
 version: "20190404"
 locale: "en"
@@ -15,7 +15,7 @@ variableGroups:
   - region
 
 - title: Compute configuration
-  visible: true  
+  visible: true
   variables:
   - compartment_ocid
   - vm_display_name
@@ -33,7 +33,7 @@ variableGroups:
   - subnet_id
 
 - title: Create new VCN
-  visible: 
+  visible:
     not:
       - ${use_existent_vcn}
   variables:
